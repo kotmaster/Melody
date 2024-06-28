@@ -1,4 +1,4 @@
-package com.example.melody
+package com.example.melody.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,15 +6,14 @@ import android.view.View
 import android.widget.PopupMenu
 import android.widget.RelativeLayout
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
+import com.example.melody.MyExoplayer
+import com.example.melody.R
 import com.example.melody.adapter.CategoryAdapter
 import com.example.melody.adapter.SectionSongListAdapter
 import com.example.melody.databinding.ActivityMainBinding
@@ -63,7 +62,7 @@ class MainActivity : AppCompatActivity() {
     fun logout(){
         MyExoplayer.getInstance()?.release()
         FirebaseAuth.getInstance().signOut()
-        startActivity(Intent(this,LoginActivity::class.java))
+        startActivity(Intent(this, LoginActivity::class.java))
         finish()
     }
 
@@ -74,7 +73,7 @@ class MainActivity : AppCompatActivity() {
 
     fun showPlayerView(){
         binding.playerView.setOnClickListener {
-            startActivity(Intent(this,PlayerActivity::class.java))
+            startActivity(Intent(this, PlayerActivity::class.java))
         }
         MyExoplayer.getCurrentSong()?.let {
             binding.playerView.visibility = View.VISIBLE
@@ -119,7 +118,7 @@ class MainActivity : AppCompatActivity() {
                     recyclerView.adapter = SectionSongListAdapter(songs)
                     mainLayout.setOnClickListener {
                         SongsListActivity.category = section
-                        startActivity(Intent(this@MainActivity,SongsListActivity::class.java))
+                        startActivity(Intent(this@MainActivity, SongsListActivity::class.java))
                     }
                 }
             }
@@ -147,11 +146,10 @@ class MainActivity : AppCompatActivity() {
                             recyclerView.adapter = SectionSongListAdapter(songs)
                             mainLayout.setOnClickListener {
                                 SongsListActivity.category = section
-                                startActivity(Intent(this@MainActivity,SongsListActivity::class.java))
+                                startActivity(Intent(this@MainActivity, SongsListActivity::class.java))
                             }
                         }
                     }
-
 
             }
     }

@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
-import com.example.melody.SongsListActivity
+import com.example.melody.activities.SongsListActivity
 import com.example.melody.databinding.CategoryItemRecyclerRowBinding
 import com.example.melody.models.CategoryModel
 

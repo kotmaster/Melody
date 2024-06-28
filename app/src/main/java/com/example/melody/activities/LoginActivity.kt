@@ -1,14 +1,11 @@
-package com.example.melody
+package com.example.melody.activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.view.View
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.melody.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import java.util.regex.Pattern
@@ -39,7 +36,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.gotoSignupBtn.setOnClickListener {
-            startActivity(Intent(this,SignupActivity::class.java))
+            startActivity(Intent(this, SignupActivity::class.java))
         }
 
     }
@@ -49,7 +46,7 @@ class LoginActivity : AppCompatActivity() {
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email,password)
             .addOnSuccessListener {
                 setInProgress(false)
-                startActivity(Intent(this@LoginActivity,MainActivity::class.java))
+                startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                 finish()
             }.addOnFailureListener {
                 setInProgress(false)
@@ -60,7 +57,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         FirebaseAuth.getInstance().currentUser?.apply {
-            startActivity(Intent(this@LoginActivity,MainActivity::class.java))
+            startActivity(Intent(this@LoginActivity, MainActivity::class.java))
             finish()
         }
     }

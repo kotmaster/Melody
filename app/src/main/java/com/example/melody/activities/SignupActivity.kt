@@ -1,4 +1,4 @@
-package com.example.melody
+package com.example.melody.activities
 
 import android.os.Bundle
 import android.util.Patterns

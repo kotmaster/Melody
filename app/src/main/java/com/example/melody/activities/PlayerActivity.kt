@@ -1,14 +1,13 @@
-package com.example.melody
+package com.example.melody.activities
 
 import android.os.Bundle
 import android.view.View
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
 import com.bumptech.glide.Glide
+import com.example.melody.MyExoplayer
+import com.example.melody.R
 import com.example.melody.databinding.ActivityPlayerBinding
 
 class PlayerActivity : AppCompatActivity() {

@@ -8,7 +8,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 import com.example.melody.MyExoplayer
-import com.example.melody.PlayerActivity
+import com.example.melody.activities.PlayerActivity
 import com.example.melody.databinding.SongListItemRecyclerRowBinding
 import com.example.melody.models.SongModel
 import com.google.firebase.firestore.FirebaseFirestore
