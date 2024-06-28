@@ -9,14 +9,14 @@ import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 import com.example.melody.MyExoplayer
 import com.example.melody.PlayerActivity
-import com.example.melody.databinding.SongListItemRecyclerRowBinding
+import com.example.melody.databinding.SectionSongListRecyclerRowBinding
 import com.example.melody.models.SongModel
 import com.google.firebase.firestore.FirebaseFirestore
 
-class SongsListAdapter(private  val songIdList : List<String>) :
-    RecyclerView.Adapter<SongsListAdapter.MyViewHolder>() {
+class SectionSongListAdapter(private  val songIdList : List<String>) :
+    RecyclerView.Adapter<SectionSongListAdapter.MyViewHolder>() {
 
-    class MyViewHolder(private val binding: SongListItemRecyclerRowBinding) : RecyclerView.ViewHolder(binding.root){
+    class MyViewHolder(private val binding: SectionSongListRecyclerRowBinding) : RecyclerView.ViewHolder(binding.root){
         //bind data with view
         fun bindData(songId : String){
 
@@ -43,7 +43,7 @@ class SongsListAdapter(private  val songIdList : List<String>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val binding = SongListItemRecyclerRowBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        val binding = SectionSongListRecyclerRowBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return MyViewHolder(binding)
     }
 

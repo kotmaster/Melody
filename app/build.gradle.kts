@@ -43,7 +43,7 @@ dependencies {
 
     implementation ("com.github.bumptech.glide:glide:4.16.0")
 
-//    implementation("com.google.firebase:firebase-firestore:24.10.0")
+    implementation("com.google.firebase:firebase-firestore:24.10.0")
     implementation("com.google.firebase:firebase-auth:22.3.1")
 
     implementation ("androidx.media3:media3-exoplayer:1.2.0")
